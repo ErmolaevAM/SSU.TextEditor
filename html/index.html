@@ -11,28 +11,27 @@
 <body>
 
 <div class="container">
-
     <nav>
         <ul class="top-menu">
             <li>
                 <a href="#">File</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">import</a></li>
-                    <li><a href="#">export</a></li>
-                    <li><a href="#">print</a></li>
+                    <li><a href="#" data-command="insertJson">import</a></li>
+                    <li><a href="#" data-command="exportJson">export</a></li>
+                    <li><a href="#" data-command="print">print</a></li>
                 </ul>
 
             </li>
             <li>
                 <a href="#">Edit</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">undo</a></li>
-                    <li><a href="#">redo</a></li>
+                    <li><a href="#" data-command='undo'>undo</a></li>
+                    <li><a href="#" data-command='redo'>redo</a></li>
                     <hr/>
-                    <li><a href="#">copy</a></li>
-                    <li><a href="#">cut</a></li>
-                    <li><a href="#">paste</a></li>
-                    <li><a href="#">paste as text</a></li>
+                    <li><a href="#" data-command='cut'>cut</a></li>
+                    <li><a href="#" data-command='copy'>copy</a></li>
+                    <li><a href="#" data-command='Paste'>paste</a></li>
+                    <li><a href="#" data-command='pastePlainText'>paste as text</a></li>
                 </ul>
 
             </li>
@@ -74,9 +73,12 @@
         <p>smth</p>
     </div>
 
+    <input type="file" onchange="previewFile()" style="display: none"><br>
+    <input type="file" class="import" onchange="importFile()" style="display: none"><br>
+    <img src="" height="200" style="display: none" alt="Image preview...">
 </div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/index.js"></script>
+<script src='../js/jquery-1.10.2.min.js'></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
