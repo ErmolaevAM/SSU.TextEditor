@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple text redactor</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/ui-lightness/jquery-ui.css" />
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css'>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <nav>
+        <ul class="top-menu">
+            <li>
+                <a href="#">File</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">import</a></li>
+                    <li><a href="#">export</a></li>
+                    <li><a href="#">print</a></li>
+                </ul>
+
+            </li>
+            <li>
+                <a href="#">Edit</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">undo</a></li>
+                    <li><a href="#">redo</a></li>
+                    <hr/>
+                    <li><a href="#">copy</a></li>
+                    <li><a href="#">cut</a></li>
+                    <li><a href="#">paste</a></li>
+                    <li><a href="#">paste as text</a></li>
+                </ul>
+
+            </li>
+        </ul>
+        <ul class="toolbar">
+            <li><a href="#" data-command='undo'><i class="fa fa-undo"></i></a></li>
+            <li><a href="#" data-command='redo'><i class="fa fa-repeat"></i></a></li>
+            <li><a href="#" data-command='bold'><i class="fa fa-bold"></i></a></li>
+            <li><a href="#" data-command='italic'><i class="fa fa-italic"></i></a></li>
+            <li><a href="#" data-command='underline'><i class="fa fa-underline"></i></a></li>
+            <li>
+                <a href="#"><i class="fa fa-align-justify"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a></li>
+                    <li><a href="#" data-command='justifyRight'><i class='fa fa-align-right'></i></a></li>
+                    <li><a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class='fa fa-image'></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-command='insertimage'>URL</a></li>
+                    <li><a href="#" data-command='insertimageFile'>File</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-table"></i></a>
+                <ul class="dropdown-menu">
+                    <li><label for="row-count">Row</label><input title="rows count" id="row-count"></li>
+                    <li><label for="col-count">Col</label><input title="columns count" id="col-count"></li>
+                    <li><a href="#" data-command="insertTable">Add</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+
+    <div class="content" contenteditable>
+        <p>smth</p>
+    </div>
+
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/index.js"></script>
+</body>
+</html>

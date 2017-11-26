@@ -1,0 +1,133 @@
+html,
+body {
+    margin: 1px;
+    height: 100%;
+    background-color: lightgray;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.content {
+    overflow: auto;
+    padding: 5px;
+    resize: none;
+    outline: none;
+    flex: auto;
+    border: 1px solid black;
+
+}
+
+ul.top-menu {
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    list-style-type: none;
+}
+
+ul.top-menu > li { /*что за запись через > ?*/
+    float: left;
+    width: 100px;
+    background-color: gray;
+    margin-right: 5px;
+}
+
+ul.top-menu > li a {
+    text-decoration: none;
+    color: black;
+}
+
+ul.top-menu > li:hover ul {
+    visibility: visible;
+    border: 1px solid black;
+}
+
+.top-menu .dropdown-menu {
+    text-align: center;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    line-height: 30px;
+    list-style-type: none;
+    background-color: lightgray;
+}
+
+.top-menu .dropdown-menu > li {
+    width: 98px;
+}
+
+.top-menu .dropdown-menu > li:hover {
+    background-color: gray;
+}
+
+ul.toolbar {
+    height: 40px;
+    line-height: 40px;
+    list-style-type: none;
+}
+
+ul.toolbar > li {
+    float: left;
+    width: 40px;
+    text-align: center;
+}
+
+ul.toolbar > li a {
+    text-decoration: none;
+    color: black;
+}
+
+.toolbar .dropdown-menu {
+    text-align: center;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    line-height: 40px;
+    list-style-type: none;
+    background-color: lightgray;
+}
+
+.toolbar .dropdown-menu > li {
+    width: 36px;
+}
+
+.toolbar .dropdown-menu > li:hover {
+    background-color: gray;
+}
+
+ul.toolbar > li:hover ul {
+    visibility: visible;
+    border: 1px solid black;
+}
+
+ul.toolbar input {
+    width: 30px;
+}
+
+.new-table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+
+.new-table thead th {
+    min-width: 50px;
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff; /*???*/
+}
+
+.new-table tbody td {
+    min-width: 50px;
+    border: 1px solid black;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff; /*???*/
+}
