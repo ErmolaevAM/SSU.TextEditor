@@ -81,8 +81,7 @@
         var file = $('.import').prop('files')[0];
         var reader = new FileReader();
         reader.onload = function () {
-            document.execCommand('insertHTML', false,
-                '<p>' + reader.result + '</p>');
+            document.execCommand('insertHTML', false, reader.result);
             file.value = null;
         };
         if (file) {
@@ -92,7 +91,7 @@
 
     function exportFile() {
         var name = prompt('Enter name here: ', '');
-        var text = $('#editor').text();
+        var text = editor.html();
         var textFileAsBlob = new Blob([text], {type: 'application/json'});
         var downloadLink = document.createElement("a");
         downloadLink.download = name + '.json';
